@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:licitatii_mobil/screens/login_screen.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
+import 'locator.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -9,6 +11,8 @@ void main() async {
     url: 'https://xiqbetuesoskwbcdemzh.supabase.co',
     anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhpcWJldHVlc29za3diY2RlbXpoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzk5MDI5OTYsImV4cCI6MjA1NTQ3ODk5Nn0.MInAD1ybIfqO4wS0B82GCOOxIeeSs8XSUgNeUxzoIVs',
   );
+  
+  setupLocator();
 
   runApp(const MyApp());
 }

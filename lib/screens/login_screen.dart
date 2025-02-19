@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
+import 'package:licitatii_mobil/presentation/map_presentation.dart';
 import 'package:licitatii_mobil/screens/map_screen.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -24,7 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
         if (session != null) {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => MapScreen()),
+            MaterialPageRoute(builder: (context) => MapScreen(presentation: GetIt.I.get<MapPresentation>(),)),
           );
         }
       }

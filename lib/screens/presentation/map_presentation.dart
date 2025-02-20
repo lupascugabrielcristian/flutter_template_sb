@@ -1,7 +1,7 @@
-import 'package:licitatii_mobil/presentation/presentation.dart';
+import 'package:licitatii_mobil/screens/presentation/presentation.dart';
 
-import '../usecase/create_trip.dart';
-import '../usecase/logout.dart';
+import '../../usecase/create_trip.dart';
+import '../../usecase/logout.dart';
 
 class MapPresentation extends Presentation {
 

@@ -13,9 +13,5 @@ class DBService {
     });
   }
 
-  Future<void> logout() {
-    log('Logout user', name: 'DBService');
-    return supabase.auth.signOut();
-  }
 
 }

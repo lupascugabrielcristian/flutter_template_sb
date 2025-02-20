@@ -1,14 +1,14 @@
 import 'package:licitatii_mobil/data/users_data_source_remote.dart';
-import 'package:licitatii_mobil/framework/db_service.dart';
+import 'package:licitatii_mobil/framework/auth_service.dart';
 
 class UsersRemoteDataGateway implements UsersDataSourceRemote {
-  final DBService dbService;
+  final AuthService authService;
 
-  const UsersRemoteDataGateway(this.dbService);
+  const UsersRemoteDataGateway(this.authService);
 
   @override
   Future<void> logout() {
-    return dbService.logout();
+    return authService.logout();
   }
 
 }

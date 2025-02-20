@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:licitatii_mobil/presentation/map_presentation.dart';
+import 'package:licitatii_mobil/screens/presentation/map_presentation.dart';
 
 class MapScreen extends StatelessWidget  {
   const MapScreen({super.key, required this.presentation});

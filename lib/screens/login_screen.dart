@@ -92,6 +92,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Text('Close'),
               onPressed: () {
                 Navigator.of(context).pop(); // Close the dialog
+                Navigator.pushReplacementNamed(context, '/map');
               },
             ),
           ],

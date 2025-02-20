@@ -9,17 +9,37 @@ class MapScreen extends StatelessWidget  {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            presentation.createTrip('Trip name').then((res) {
-              debugPrint('Trip created');
-            });
-          },
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Text('map'),
-          ))
+        child: Column(
+          spacing: 40,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Map screen'),
+
+            ElevatedButton(
+                onPressed: () {
+                  presentation.createTrip('Trip name').then((res) {
+                    debugPrint('Trip created');
+                  });
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Text('Create trip'),
+                )),
+
+            ElevatedButton(
+              onPressed: () {
+                presentation.logout().then((res) {
+                  Navigator.pushNamed(context, '/login');
+                });
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Text('Logout'),
+              )),
+          ],
+        )
       ),);
   }
 

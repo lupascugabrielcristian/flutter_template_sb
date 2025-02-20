@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
-import 'package:licitatii_mobil/presentation/map_presentation.dart';
-import 'package:licitatii_mobil/screens/map_screen.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class LoginScreen extends StatefulWidget  {
@@ -24,10 +21,7 @@ class _LoginScreenState extends State<LoginScreen> {
         final session = supabase.auth.currentSession;
 
         if (session != null) {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => MapScreen(presentation: GetIt.I.get<MapPresentation>(),)),
-          );
+          Navigator.pushNamed(context, '/map');
         }
       }
     });

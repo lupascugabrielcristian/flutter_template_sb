@@ -10,7 +10,16 @@ class MapScreen extends StatelessWidget  {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text('map')
+        child: ElevatedButton(
+          onPressed: () {
+            presentation.createTrip('Trip name').then((res) {
+              debugPrint('Trip created');
+            });
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Text('map'),
+          ))
       ),);
   }
 
